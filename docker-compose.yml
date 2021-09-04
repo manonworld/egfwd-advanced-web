@@ -1,0 +1,24 @@
+version: '3.4'
+
+services:
+  front:
+    build:
+      context: ./
+      dockerfile: ./.docker/react/Dockerfile
+    container_name: react
+    ports:
+      - 3000:3000
+    tty: true
+    volumes:
+      - ./contacts:/contacts
+
+  back:
+    build:
+      context: ./
+      dockerfile: ./.docker/node/Dockerfile
+    container_name: node
+    ports:
+      - 5001:5001
+    tty: true
+    volumes:
+      - ./server:/server
