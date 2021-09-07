@@ -8,7 +8,10 @@ Run ``` make install ```
 
 ### Run
 
-Run ``` make run ```
+Run ``` make run-frontend ```
+And ``` make run-backend ``` in another terminal
+
+And finally, point your browser to ``` http://localhost:3000 ```
 
 ### Clean
 
